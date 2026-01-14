@@ -1,0 +1,12 @@
+services:
+  kaigi:
+    build: .
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+      - kaigi_home:/home/ruby
+      - ./sandbox:/home/ruby/sandbox
+
+volumes:
+  kaigi_home:
